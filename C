@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+
+//Iam sorry but I used chat GPT only in this code and the problem is very complicated but I undertood the idea but I can't explain code
+//So I do not deserve the grade but I tried
+
+
+
+int main() {
+    int n;
+    cin >> n;
+
+    string titles[1000];
+    string title; 
+    int count[1000] ; //code cannot work with 100000 books so I used 1000
+    int index = 0;
+
+    while (n--) {
+        cin >> title; 
+
+        int i = 0;
+        for (; i < index; i++) { 
+            if (titles[i] == title) {
+                break;
+            }
+        }
+
+        if (i == index) {
+            titles[index] = title;
+            count[index] = 0;
+            index++;
+            cout << "OK\n";
+        }
+        else {
+            count[i]++;
+            cout << title << count[i] << "\n";
+        }
+    }
+
+}
