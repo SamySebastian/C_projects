@@ -1,0 +1,28 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int flowers[3];
+	for (int i = 0; i < 3; i++)
+	{
+		cin >> flowers[i];
+	}
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 1; j++)
+		{
+			if (flowers[j] > flowers[j+1]) {
+				int temp = flowers[j];
+				flowers[j] = flowers[j + 1];
+				flowers[j + 1] = temp; 
+			}
+		}
+	}
+	
+	cout << flowers[0];
+
+}
+
